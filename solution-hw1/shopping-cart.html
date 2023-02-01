@@ -1,0 +1,81 @@
+<!-- Document Setup -->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>BunBun</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body>
+    <!-- Top Bar -->
+    <header>
+      <a href="./index.html" id="logo-link">
+        <img id="logo-image"
+          src="./logo/logo-01.svg"
+          alt="Logo of BunBun Bake Shop"/>
+      </a>
+    </header>
+      
+    <!-- Navigation -->
+    <nav class="navigation-content">
+      <a href="./index.html"
+        class="navigation-text">
+          PRODUCTS
+      </a>
+          
+      <a href="./shopping-cart.html"
+        class="navigation-text">
+          CART
+      </a>
+    </nav>
+
+    <main class="shopping-cart-main-content">
+      <div class="section-title">
+        <h4>Shopping Cart</h4>
+      </div>
+
+      <!-- Shopping Cart Items -->
+      <div class="shopping-cart-items">
+        <!-- Original Cinnamon Roll Order -->
+        <div class="cart-original-cinnamon">
+          <img src="./products/	original-cinnamon-roll.jpg"
+            alt="Cinnamon roll on plate next to cinnamon stick"
+            id="cart-original-cinnamon-image"/>
+
+          <div class="cart-original-text">
+            <p class="remove-txt">Remove</p>
+            <p class="description-txt">Original Cinnamon Roll</p>
+            <p class="description-txt">Glazing: Keep original</p>
+            <p class="description-txt">Pack Size: 1</p>
+            <p class="price-txt">$2.49</p>
+          </div>  
+        </div>
+
+        <!-- Double Chocolate Cinnamon Roll Order -->
+        <div class="cart-double-chocolate">
+          <img src="./products/double-chocolate-cinnamon-roll.jpg"
+            width="100"
+            alt="Close-up of double-chocolate cinnamon roll"
+            id="cart-chocolate-image"/>
+
+          <div class="cart-chocolate-text">
+            <p class="remove-txt">Remove</p>
+            <p class="description-txt">Double Chocolate Cinnamon Roll</p>
+            <p class="description-txt">Glazing: Sugar milk</p>
+            <p class="description-txt">Pack Size: 6</p>
+            <p class="price-txt">$27.45</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total and checkout -->
+      <div class="cart-checkout">
+        <p class="price-txt">Total: $29.74</p>
+        <h4 id="cart-button">Checkout</h4>
+      </div>
+
+    </main>
+
+  </body>
+</html>
