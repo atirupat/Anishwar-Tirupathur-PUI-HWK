@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: `https://atirupat.github.io/Anishwar-Tirupathur-PUI-HWK/`
 
 Repository link: `https://github.com/atirupat/Anishwar-Tirupathur-PUI-HWK`
