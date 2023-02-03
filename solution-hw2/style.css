@@ -1,0 +1,385 @@
+/* Text Styles */
+body {
+  font-family: sans-serif;
+}
+
+.image-caption {
+  font-size: small;
+}
+
+/* ------------------- */
+
+/* Page Titles */
+h4 {
+  font-weight: normal;
+  font-size: x-large;
+  
+  color: black;
+
+  text-align: center;
+}
+
+/* ------------------- */
+
+/* Image Styles */
+img {
+  border: 2px solid black;
+}
+
+#logo-image:hover {
+  background-color: white;
+}
+
+/* ------------------- */
+/* Link Style */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: yellow;
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ----------------- */
+
+/* Top Bar Flex Box */
+header {
+  display: flex;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 30%;
+
+  background-color: white;
+
+  /* border: 3px solid black;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px; */
+}
+
+/* Logo Boxes */
+#logo-link {
+  background-color: green;
+
+  width: 250px;
+  height: auto;
+}
+
+#logo-image {
+  border: 0px;
+  background-color: rgb(211, 68, 68);
+
+  /* width: auto;
+  height: auto; */
+
+
+
+  align-content: center;
+}
+
+/* Navigation and Section-Title Sub-Flex-Box */
+.top-txt-box {
+  background-color: aqua;
+  height: auto;
+}
+/* Navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  /* padding-bottom: 40px; */
+}
+
+.navigation-text {
+  font-size: medium;
+  font-weight: lighter;
+
+  /* margin-top: 15px; */
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Common Page Styles */
+.section-title {
+  margin-bottom: 5px;
+}
+
+/* ------------------ */
+
+/* Gallery Flex Box */
+.gallery-content {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 600px;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: white;
+}
+
+.gallery-section {
+  width: 204px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 2px;
+}
+
+.gallery-description-txt {
+  font-size: 18px;
+  text-decoration: underline;
+
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  width: 100%;
+}
+
+.gallery-price-txt {
+  font-size: 18px;
+
+  margin-top: 5px;
+  margin-bottom: auto;
+}
+
+.gallery-img {
+  width: 200px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  align-content: center;
+}
+
+/* Product Detail Flex Box */
+.product-detail-section {
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-img {
+  width: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glaze-image-caption {
+  font-size: medium;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 200px;
+}
+
+.dropdown-menu {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 200px;
+}
+
+.dropdown-caption {
+  font-size: medium;
+}
+
+.dropdown-style {
+  width: 200px;
+
+  font-size: medium;
+}
+
+.add-cart {
+  display: flex;
+
+  width: 200px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+#detail-price {
+  margin-left: auto;
+  width: 50%;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+#detail-cart-button {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  width: 50%;
+  height: min-content;
+
+  border: 1px solid black;
+  font-size: small;
+}
+
+
+/* Shopping Cart Flex Box: */
+.shopping-cart-main-content {
+  display:flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 600px;
+  height: auto;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: white;
+}
+
+.shopping-cart-items {
+  border: 0px solid black;
+  border-width: 0px 0px 3px 0px;
+}
+
+/* Original Cinnamon Box */
+.cart-original-cinnamon {
+  background-color: white;
+
+  width: 50%;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+#cart-original-cinnamon-image {
+  width: 33.3%;
+  
+  margin: auto 33.3%;
+}
+
+.cart-original-text {
+  text-align: center;
+}
+
+/* Double-Chocolate Box */
+.cart-double-chocolate {
+  background-color: white;
+
+  width: 50%;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+#cart-chocolate-image {
+  width: 33.3%;
+  
+  margin: auto 33.3%;
+}
+
+.cart-chocolate-text {
+  text-align: center;
+}
+
+/* Total and Checkout */
+.cart-checkout {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  background-color:white;
+}
+
+/* #cart-button {
+  width: 20%;
+  
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  margin: auto 40%;
+
+  border: 2px solid black;
+} */
+
+#cart-button {
+  margin: auto;
+
+  text-align: center;
+  align-content: center;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: max-content;
+  height: min-content;
+
+  border: 1px solid black;
+  font-size: small;
+}
+
+.remove-txt {
+  font-size: xx-small;
+  font-weight: bold;
+
+  color: black;
+
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.price-txt {
+  font-size: medium;
+}
+
+.description-txt {
+  font-size: small;
+  font-weight: normal;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+
