@@ -98,7 +98,7 @@ nav {
   border-left: 0px;
   border-right: 0px;
 
-  height: auto;
+  height: 15%;
 
   background-color: blueviolet;
 
@@ -115,7 +115,7 @@ nav {
   margin-right: auto;
   
   width: fit-content;
-  height: fit-content;
+  height: inherit;
 
   padding-left: 20px;
   padding-right: 20px;
@@ -132,17 +132,13 @@ nav {
 
 /* Common Page Styles */
 .section-title {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  
   text-align: left;
   align-self: flex-end;
 
-  height: auto;
-  
+  height: 50%;
   margin-bottom: 0px;
-  margin-top: auto;
+  margin-top: inherit;
+  margin-left: 30px;
 }
 
 /* ------------------ */
