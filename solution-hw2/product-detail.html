@@ -9,7 +9,7 @@
 
   <body>
     <!-- Top Bar -->
-    
+
     <!-- Placing logo image, navigation bar and section title in one flex box.  -->
     <header>
       <a href="./index.html" id="logo-link">
@@ -43,57 +43,70 @@
         
       </div>
     </header>
-    
-    <main>
-      <!-- Featured Image -->
-      <img src="./products/original-cinnamon-roll.jpg"
-        alt="Cinnamon roll on plate next to cinnamon stick"
-        class="detail-img"/>
 
-      <!-- Image Caption -->
-      <p id="glaze-image-caption">Customize our delicious, hand-made cinnamon roll to your liking!</p>
+    <!------------------------------------------------------------------------------>
+    <!-- Main Product Detail Content -->
+    <main class="product-detail-section">
 
-      <!-- Glazing Dropdown Menu -->
-      <div class="dropdown-menu">
-        <label for="glazing" class="dropdown-caption">
-          Glazing:
-        </label>
+      <!-- Divide Product Detail Section into Two Large Flex Boxes: Featured Image and Order Content -->
 
-        <!-- Glazing Menu Options -->
-        <select id="glazing" class="dropdown-style">
-          <option value="keep original">Keep original</option>
-          <option value="sugar milk">Sugar milk</option>
-          <option value="vanilla milk">Vanilla milk</option>
-          <option value="double chocolate">Double chocolate</option>
-        </select>
+      <!-- Featured Image-->
+      <div class="product-img">
+        <img src="./products/original-cinnamon-roll.jpg"
+          alt="Cinnamon roll on plate next to cinnamon stick"
+          class="detail-img"/>
       </div>
 
-      <!-- Pack Size Dropdown Menu -->
-      <div class="dropdown-menu">
-        <label for="pack-size" class="dropdown-caption">
-          Pack size:
-        </label>
-              
-      <!-- Pack Size Menu Options -->
-        <select id="pack-size" class="dropdown-style">
-          <option value="one">1</option>
-          <option value="three">3</option>
-          <option value="six">6</option>
-          <option value="dozen">12</option>
-        </select>
+      <!-- Second Flexbox -->
+      <div class="order-content">
+        <!-- Image Caption -->
+        <p id="glaze-image-caption">Customize our delicious, hand-made cinnamon roll to your liking!</p>
+
+        <!-- Glazing Dropdown Menu -->
+        <div class="dropdown-flexbox">
+          <div class="dropdown-menu">
+            <label for="glazing" class="dropdown-caption">
+              Glazing:
+            </label>
+
+            <!-- Glazing Menu Options -->
+            <select id="glazing" class="dropdown-style">
+              <option value="keep original">Keep original</option>
+              <option value="sugar milk">Sugar milk</option>
+              <option value="vanilla milk">Vanilla milk</option>
+              <option value="double chocolate">Double chocolate</option>
+            </select>
+          <!-- </div> -->
+
+          <!-- Pack Size Dropdown Menu -->
+          <!-- <div class="dropdown-menu"> -->
+            <label for="pack-size" class="dropdown-caption">
+              Pack size:
+            </label>
+                  
+          <!-- Pack Size Menu Options -->
+            <select id="pack-size" class="dropdown-style">
+              <option value="one">1</option>
+              <option value="three">3</option>
+              <option value="six">6</option>
+              <option value="dozen">12</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Price and "Add to Cart" Button -->
+        <div class="add-cart">
+          <p id="detail-price">$2.49</p>
+        
+          <!-- Button -->
+          <a href="./shopping-cart.html" 
+              id="detail-cart-button">
+              Add to Cart
+          </a>
+        </div>
+
       </div>
     </main>
-
-  <!-- Price and "Add to Cart" Button -->
-  <div class="add-cart">
-    <p id="detail-price">$2.49</p>
-  
-    <!-- Button -->
-    <a href="./shopping-cart.html" 
-        id="detail-cart-button">
-        Add to Cart
-    </a>
-  </div>
 
   </body>
 </html>
