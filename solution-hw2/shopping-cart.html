@@ -4,37 +4,47 @@
   <head>
     <meta charset="UTF-8">
     <title>BunBun</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
   </head>
 
   <body>
     <!-- Top Bar -->
+
+    <!-- Placing logo image, navigation bar and section title in one flex box.  -->
     <header>
       <a href="./index.html" id="logo-link">
         <img id="logo-image"
           src="./logo/logo-01.svg"
           alt="Logo of BunBun Bake Shop"/>
       </a>
-    </header>
       
-    <!-- Navigation -->
-    <nav class="navigation-content">
-      <a href="./index.html"
-        class="navigation-text">
-          PRODUCTS
-      </a>
+      <!-- Box for Navigation and section title -->
+      <div class="top-txt-box">
+
+        <!-- Navigation -->
+        <nav>
+          <div class="navigation-text">
+            <a href="./index.html"
+              id="nav-product">
+                PRODUCTS
+            </a>
+          </div>
           
-      <a href="./shopping-cart.html"
-        class="navigation-text">
-          CART
-      </a>
-    </nav>
+          <div class="navigation-text">
+            <a href="./shopping-cart.html"
+              id="nav-cart">
+                CART
+            </a>
+          </div>
+        </nav>
 
-    <main class="shopping-cart-main-content">
-      <div class="section-title">
-        <h4>Shopping Cart</h4>
+        <!-- Section Title -->
+        <h4 class="section-title">Shopping Cart</h4>
+        
       </div>
+    </header>
 
+    <main>
       <!-- Shopping Cart Items -->
       <div class="shopping-cart-items">
         <!-- Original Cinnamon Roll Order -->
