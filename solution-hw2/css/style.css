@@ -85,12 +85,12 @@ header {
   background-color: aqua;
 
   width:auto;
-  height: 30%;
+  height: inherit;
 
   flex-grow: 1;
 }
 /* Navigation */
-nav {
+nav {s
   text-align: right;
 
   border: 3px solid black;
@@ -124,10 +124,13 @@ nav {
 /* IDs Created for Navigation Text Flex Box */
   #nav-gallery {
     background-color: bisque;
+    margin-left: 60%;
   }
 
   #cart-gallery {
     background-color: darkgoldenrod;
+
+    flex-gr
   }
 
 /* Common Page Styles */
@@ -137,7 +140,7 @@ nav {
 
   height: 50%;
   margin-bottom: 0px;
-  margin-top: inherit;
+  margin-top: 100px;
   margin-left: 30px;
 }
 
