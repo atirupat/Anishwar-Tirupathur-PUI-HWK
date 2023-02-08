@@ -12,7 +12,7 @@ body {
 /* Page Titles */
 h4 {
   font-weight: normal;
-  font-size: x-large;
+  font-size: 25px;
   
   color: black;
 }
@@ -249,55 +249,74 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* align-items: start; */
 
-  width: 45%;
+  width: 40%;
   height: 490px;
 
   background-color: blue;
 }
 
 #glaze-image-caption {
-  font-size: large;
+  font-size: 22px;
 
   margin-left: auto;
   margin-right: auto;
 
-  width: 200px;
+  width: 70%;
+
+  font-weight: lighter;
 }
 
-.dropdown-flex-box{
+.dropdown-flexbox{
   display: flex;
   flex-direction: column;
 
   justify-content: space-between;
 
-  width: inherit;
-  height: 30%;
+  width: 70%;
+  height: 50%;
 
-  /* background-color: aquamarine; */
-}
-
-.dropdown-menu {
   margin-left: auto;
   margin-right: auto;
 
-  width: 200px;
+  background-color: aquamarine;
 }
 
-.dropdown-caption {
-  font-size: medium;
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  width: 150px;
 }
 
-.dropdown-style {
-  width: inherit;
+label {
+  background-color: aqua;
+  font-size: 22px;
+  /* padding-bottom: 10px; */
+  font-weight: lighter;
+}
 
-  font-size: medium;
+select {
+  /* appearance: none; */
+  box-sizing: border-box;
+  width:100%;
+
+  font-size: 20px;
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .add-cart {
   display: flex;
 
-  width: 200px;
+  width: 70%;
 
   margin-left: auto;
   margin-right: auto;
@@ -305,8 +324,9 @@ nav {
 }
 
 #detail-price {
-  margin-left: auto;
-  width: 50%;
+  flex-grow: 1;
+
+  /* width: 50%; */
 
   font-weight: bold;
 
@@ -316,18 +336,17 @@ nav {
 #detail-cart-button {
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: auto;
 
   text-align: center;
 
   padding-top: 5px;
   padding-bottom: 5px;
 
-  width: 50%;
+  width: 55%;
   height: min-content;
 
   border: 1px solid black;
-  font-size: small;
+  font-size: medium;
 }
 
 
