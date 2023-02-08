@@ -95,32 +95,34 @@ header {
 nav {
   display: flex;
 
-  text-align: right;
-
   border: 3px solid black;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
 
+
   height: 102px;
 
   background-color: blueviolet;
+  justify-content: flex-end;
 }
 
 .navigation-text {
   font-size: medium;
   font-weight: lighter;
 
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   margin-top: auto;
   margin-bottom: auto;
   
-  width: fit-content;
-  height: inherit;
+  /* width: fit-content;
+  height: inherit; */
 
   padding-left: 20px;
   padding-right: 20px;
+
+
 }
 
 /* IDs Created for Navigation Text Flex Box */
@@ -128,8 +130,6 @@ nav {
     /* background-color: bisque; */
 
     margin-left: auto;
-
-    flex-grow: 1;
 
     height: auto;
   }
@@ -143,8 +143,6 @@ nav {
 
     margin-top: auto;
     margin-bottom: auto;
-
-    flex-shrink: 0;
   }
 
 /* Common Page Styles */
