@@ -4,38 +4,44 @@
   <head>
       <meta charset="UTF-8">
       <title>BunBun</title>
-      <link rel="stylesheet" href="style.css"/>
+      <link rel="stylesheet" href="./css/style.css"/>
   </head>
 
   <body>
     <!-- Top Bar -->
+    <!-- Placing logo image, navigation bar and section title in one flex box.  -->
     <header>
-        <a href="./index.html" id="logo-link">
-          <img id="logo-image"
-            src="./logo/logo-01.svg"
-            width="400"
-            alt="Logo of BunBun Bake Shop"/>
-        </a>
-    </header>
+      <a href="./index.html" id="logo-link">
+        <img id="logo-image"
+          src="./logo/logo-01.svg"
+          alt="Logo of BunBun Bake Shop"/>
+      </a>
       
-    <!-- Navigation -->
-    <nav class="navigation-content">
-      <a href="./index.html"
-        class="navigation-text">
-          PRODUCTS
-      </a>
-          
-      <a href="./shopping-cart.html"
-        class="navigation-text">
-          CART
-      </a>
-    </nav>
+      <!-- Box for Navigation and section title -->
+      <div class="top-txt-box">
 
-    <main class="product-detail-section">
-      <div class="section-title">
-        <h4>Original cinnamon roll</h4>
+        <!-- Navigation -->
+        <nav>
+          <a href="./index.html"
+            class="navigation-text"
+            id="nav-product">
+              PRODUCTS
+          </a>
+              
+          <a href="./shopping-cart.html"
+            class="navigation-text"
+            id="nav-cart">
+              CART
+          </a>
+        </nav>
+
+        <!-- Section Title -->
+        <h4 class="section-title">Original cinnamon roll</h4> 
       </div>
 
+    </header>
+    
+    <main>
       <!-- Featured Image -->
       <img src="./products/original-cinnamon-roll.jpg"
         alt="Cinnamon roll on plate next to cinnamon stick"
@@ -59,8 +65,6 @@
         </select>
       </div>
 
-      <br/>
-
       <!-- Pack Size Dropdown Menu -->
       <div class="dropdown-menu">
         <label for="pack-size" class="dropdown-caption">
@@ -77,16 +81,16 @@
       </div>
     </main>
 
-    <!-- Price and "Add to Cart" Button -->
-    <div class="add-cart">
-      <p id="detail-price">$2.49</p>
-    
-      <!-- Button -->
-      <a href="./shopping-cart.html" 
-          id="detail-cart-button">
-          Add to Cart
-      </a>
-    </div>
+  <!-- Price and "Add to Cart" Button -->
+  <div class="add-cart">
+    <p id="detail-price">$2.49</p>
+  
+    <!-- Button -->
+    <a href="./shopping-cart.html" 
+        id="detail-cart-button">
+        Add to Cart
+    </a>
+  </div>
 
   </body>
 </html>

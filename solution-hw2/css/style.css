@@ -67,6 +67,8 @@ header {
 
   width: 30%;
   height: fit-content;
+
+  margin-right: 20px;
 }
 
  #logo-image {
@@ -90,7 +92,9 @@ header {
   flex-grow: 1;
 }
 /* Navigation */
-nav {s
+nav {
+  display: flex;
+
   text-align: right;
 
   border: 3px solid black;
@@ -98,21 +102,19 @@ nav {s
   border-left: 0px;
   border-right: 0px;
 
-  height: 15%;
+  height: 102px;
 
   background-color: blueviolet;
-
-  padding-top: 3%;
-  padding-bottom: 3%;
 }
 
 .navigation-text {
   font-size: medium;
   font-weight: lighter;
 
-  /* margin-top: 15px; */
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   
   width: fit-content;
   height: inherit;
@@ -122,15 +124,27 @@ nav {s
 }
 
 /* IDs Created for Navigation Text Flex Box */
-  #nav-gallery {
-    background-color: bisque;
-    margin-left: 60%;
+  #nav-product {
+    /* background-color: bisque; */
+
+    margin-left: auto;
+
+    flex-grow: 1;
+
+    height: auto;
   }
 
-  #cart-gallery {
+  #nav-cart {
     background-color: darkgoldenrod;
+    width: auto;
+    height: auto;
 
-    flex-gr
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    flex-shrink: 0;
   }
 
 /* Common Page Styles */
@@ -138,10 +152,11 @@ nav {s
   text-align: left;
   align-self: flex-end;
 
-  height: 50%;
+  height: auto;
+
   margin-bottom: 0px;
-  margin-top: 100px;
   margin-left: 30px;
+  margin-top: 60px;
 }
 
 /* ------------------ */
@@ -163,6 +178,15 @@ nav {s
   margin-right: auto;
 
   background-color: white;
+}
+
+.gallery-row {
+  display: flex;
+
+  width: auto;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery-section {
