@@ -253,7 +253,7 @@ nav {
 }
 
 #glaze-image-caption {
-  font-size: 26px;
+  font-size: 24px;
 
   margin-left: auto;
   margin-right: auto;
@@ -286,6 +286,8 @@ nav {
 
   margin-top: auto;
   margin-bottom: auto;
+
+  padding-bottom: 40px;
 }
 
 label {
