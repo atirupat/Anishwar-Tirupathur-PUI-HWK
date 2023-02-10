@@ -1,0 +1,112 @@
+<!-- Document Setup -->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+      <meta charset="UTF-8">
+      <title>BunBun</title>
+      <link rel="stylesheet" href="./css/style.css"/>
+  </head>
+
+  <body>
+    <!-- Top Bar -->
+
+    <!-- Placing logo image, navigation bar and section title in one flex box.  -->
+    <header>
+      <a href="./index.html" id="logo-link">
+        <img id="logo-image"
+          src="./logo/logo-01.svg"
+          alt="Logo of BunBun Bake Shop"/>
+      </a>
+      
+      <!-- Box for Navigation and section title -->
+      <div class="top-txt-box">
+
+        <!-- Navigation -->
+        <nav>
+          <div class="navigation-text">
+            <a href="./index.html"
+              id="nav-product">
+                PRODUCTS
+            </a>
+          </div>
+          
+          <div class="navigation-text">
+            <a href="./shopping-cart.html"
+              id="nav-cart">
+                CART
+            </a>
+          </div>
+        </nav>
+
+        <!-- Section Title -->
+        <h4 class="section-title">Original cinnamon roll</h4>
+        
+      </div>
+    </header>
+
+    <!------------------------------------------------------------------------------>
+    <!-- Main Product Detail Content -->
+    <main class="product-detail-section">
+
+      <!-- Divide Product Detail Section into Two Large Flex Boxes: Featured Image and Order Content -->
+
+      <!-- Featured Image-->
+      <div class="product-img">
+        <img src="./products/original-cinnamon-roll.jpg"
+          alt="Cinnamon roll on plate next to cinnamon stick"
+          class="detail-img"/>
+      </div>
+
+      <!-- Second Flexbox -->
+      <div class="order-content">
+        <!-- Image Caption -->
+        <p id="glaze-image-caption">Customize our delicious, hand-made cinnamon roll to your liking!</p>
+
+        <!-- Glazing Dropdown Menu -->
+        <div class="dropdown-flexbox">
+          <div class="dropdown-menu">
+            <label for="glazing">
+              Glazing:
+            </label>
+
+            <!-- Glazing Menu Options -->
+            <select id="glazing" class="dropdown-style">
+              <option value="keep original">Keep original</option>
+              <option value="sugar milk">Sugar milk</option>
+              <option value="vanilla milk">Vanilla milk</option>
+              <option value="double chocolate">Double chocolate</option>
+            </select>
+          </div>
+
+          <!-- Pack Size Dropdown Menu -->
+          <div class="dropdown-menu">
+            <label for="pack-size">
+              Pack size:
+            </label>
+                  
+          <!-- Pack Size Menu Options -->
+            <select id="pack-size" class="dropdown-style">
+              <option value="one">1</option>
+              <option value="three">3</option>
+              <option value="six">6</option>
+              <option value="dozen">12</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Price and "Add to Cart" Button -->
+        <div class="add-cart">
+          <p id="detail-price">$2.49</p>
+        
+          <!-- Button -->
+          <a href="./shopping-cart.html" 
+              id="detail-cart-button">
+              Add to Cart
+          </a>
+        </div>
+
+      </div>
+    </main>
+
+  </body>
+</html>
