@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <title>BunBun</title>
       <link rel="stylesheet" href="./css/style.css"/>
-      <script src="product-detail.js" type="text/javascript"></script>
+      <script defer src="./js/product-detail.js"></script>
   </head>
 
   <body>
@@ -71,11 +71,12 @@
             </label>
 
             <!-- Glazing Menu Options -->
-            <select id="glazing" class="dropdown-style">
-              <option value="keep original">Keep original</option>
-              <option value="sugar milk">Sugar milk</option>
-              <option value="vanilla milk">Vanilla milk</option>
-              <option value="double chocolate">Double chocolate</option>
+            <select id="glazing" class="dropdown-style"
+              onchange="glazingChange(this)">
+              <!-- <option value="0">Keep original</option>
+              <option value="1">Sugar milk</option>
+              <option value="2">Vanilla milk</option>
+              <option value="3">Double chocolate</option> -->
             </select>
           </div>
 
