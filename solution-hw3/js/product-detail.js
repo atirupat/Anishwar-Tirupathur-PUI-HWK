@@ -1,11 +1,32 @@
-// Creating an array for the Glazing Dropdown Menu Options
+// Creating a class for the Glazing Dropdown Menu Options
 
-let glazingOptions = [
-  'Keep original',
-  'Sugar milk',
-  'Vanilla milk',
-  'Double chocolate'
-];
+class Glazing{
+  optionName;
+  priceAdaptation;
+
+  constructor (optionName, priceAdaptation) {
+    this.optionName = optionName;
+    this.priceAdaptation = priceAdaptation;
+  }
+};
+
+let keepOriginal = new Glazing('Keep Original',0.00);
+
+let sugarMilk = new Glazing('Sugar Milk',0.00);
+
+let vanillaMilk = new Glazing('Vanilla Milk',0.50);
+
+let doubleChocolate = new Glazing('Double Chocolate',1.50);
+
+// Create an array with the new glazing options
+let glazingOptions = [];
+
+glazingOptions.push(keepOriginal.optionName);
+glazingOptions.push(sugarMilk.optionName);
+glazingOptions.push(vanillaMilk.optionName);
+glazingOptions.push(doubleChocolate.optionName);
+
+// ------------------------------------------------------------------------------
 
 function glazingChange(element) {
   // get value of selected glazing option
@@ -16,6 +37,21 @@ function glazingChange(element) {
 
   glazingChoice.innerText = priceChange;
 };
+
+// The following code is adapted from the example provided with Lab 04
+
+let selectElement = document.querySelector('#glazing');
+
+var option = document.createElement('option');
+option.text = glazingOptions.optionName;
+option.value = glazingOptions.length - 1; 
+selectElement.add(option);
+
+// Give it a listener for the 'change' event, which is a function that will run
+// when the selected option changes. You could also do this by setting the
+// onchange property of selectElement, e.g. selectElement.onchange = ...
+
+selectElement.addEventListener('change', chooseGlazingType);
 
 function chooseGlazingType() {
   // In this function, `this` corresponds to the select
@@ -33,14 +69,3 @@ function chooseGlazingType() {
   displayGlazing(glazingSelected);
 }
 
-var option = document.createElement('option');
-option.text = glazingOptions.value;
-option.value = glazingOptions.length - 1; // Its value should be the index of the last element in allCars
-selectElement.add(option);
-
-// Give it a listener for the 'change' event, which is a function that will run
-// when the selected option changes. You could also do this by setting the
-// onchange property of selectElement, e.g. selectElement.onchange = ...
-selectElement.addEventListener('change', chooseGlazingType);
-
-let selectElement = document.querySelector('#glazing');
