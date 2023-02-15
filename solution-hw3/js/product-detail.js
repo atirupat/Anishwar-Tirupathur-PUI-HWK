@@ -21,10 +21,10 @@ let doubleChocolate = new Glazing('Double Chocolate',1.50);
 // Create an array with the new glazing options
 let glazingOptions = [];
 
-glazingOptions.push(keepOriginal.optionName);
-glazingOptions.push(sugarMilk.optionName);
-glazingOptions.push(vanillaMilk.optionName);
-glazingOptions.push(doubleChocolate.optionName);
+// glazingOptions.push(keepOriginal.optionName);
+// glazingOptions.push(sugarMilk.optionName);
+// glazingOptions.push(vanillaMilk.optionName);
+// glazingOptions.push(doubleChocolate.optionName);
 
 // ------------------------------------------------------------------------------
 
@@ -42,10 +42,11 @@ function glazingChange(element) {
 
 let selectElement = document.querySelector('#glazing');
 
-var option = document.createElement('option');
-option.text = glazingOptions.optionName;
-option.value = glazingOptions.length - 1; 
-selectElement.add(option);
+for (i=0; i < 3; i++)
+  var option = document.createElement('option');
+  option.text = glazingOptions.optionName;
+  option.value = glazingOptions.length - 1; 
+  selectElement.add(option);
 
 // Give it a listener for the 'change' event, which is a function that will run
 // when the selected option changes. You could also do this by setting the
