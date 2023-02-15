@@ -10,49 +10,42 @@ class Glazing{
   }
 };
 
-let keepOriginal = new Glazing('Keep Original',0.00);
+// Create Glazing Dropdown Menu Option Objects from Class
+const keepOriginal = new Glazing('Keep Original',0.00);
 
-let sugarMilk = new Glazing('Sugar Milk',0.00);
+const sugarMilk = new Glazing('Sugar Milk',0.00);
 
-let vanillaMilk = new Glazing('Vanilla Milk',0.50);
+const vanillaMilk = new Glazing('Vanilla Milk',0.50);
 
-let doubleChocolate = new Glazing('Double Chocolate',1.50);
+const doubleChocolate = new Glazing('Double Chocolate',1.50);
 
 // Create an array with the new glazing options
 let glazingOptions = [];
 
-// glazingOptions.push(keepOriginal.optionName);
-// glazingOptions.push(sugarMilk.optionName);
-// glazingOptions.push(vanillaMilk.optionName);
-// glazingOptions.push(doubleChocolate.optionName);
+glazingOptions.push(keepOriginal);
+glazingOptions.push(sugarMilk);
+glazingOptions.push(vanillaMilk);
+glazingOptions.push(doubleChocolate);
 
 // ------------------------------------------------------------------------------
 
-function glazingChange(element) {
-  // get value of selected glazing option
-  const priceChange = element.value;
-  console.log('Yo is this working?');
-
-  let glazingChoice = document.querySelector('#glazing');
-
-  glazingChoice.innerText = priceChange;
-};
-
 // The following code is adapted from the example provided with Lab 04
+// Add Glazing Elements to Glazing Selection Dropdown Menu
 
-let selectElement = document.querySelector('#glazing');
+let selectGlazingElement = document.querySelector('#glazing');
 
-for (i=0; i < 3; i++)
-  var option = document.createElement('option');
-  option.text = glazingOptions.optionName;
-  option.value = glazingOptions.length - 1; 
-  selectElement.add(option);
-
+for (let i=0; i < glazingOptions.length; i++) {
+  let option = document.createElement('option');
+  let glazingLoad = glazingOptions[i];
+  option.text = glazingLoad.optionName;
+  option.value = glazingLoad.priceAdaptation; 
+  selectGlazingElement.add(option);
+}
 // Give it a listener for the 'change' event, which is a function that will run
 // when the selected option changes. You could also do this by setting the
 // onchange property of selectElement, e.g. selectElement.onchange = ...
 
-selectElement.addEventListener('change', chooseGlazingType);
+selectGlazingElement.addEventListener('change', chooseGlazingType);
 
 function chooseGlazingType() {
   // In this function, `this` corresponds to the select
@@ -65,8 +58,69 @@ function chooseGlazingType() {
 
   // Now retrieve the object at the index specified by the select's value
   let glazingSelected = glazingOptions[glazeIndex];
-
-  // Update the UI
-  displayGlazing(glazingSelected);
 }
 
+// ------------------------------------------------------------------------------
+// Creating a class for the Pack Size Dropdown Menu Options
+
+class Pack{
+  orderSize;
+  priceMultiplier;
+
+  constructor (orderSize, priceMultiplier) {
+    this.orderSize = orderSize;
+    this.priceMultiplier = priceMultiplier;
+  }
+};
+
+// Create Glazing Dropdown Menu Option Objects from Class
+const packOne = new Pack('1',1);
+
+const packThree = new Pack('3',3);
+
+const packSix = new Pack('6',5);
+
+const packDozen = new Pack('12',10);
+
+// Create an array with the new Pack options
+let packOptions = [];
+
+packOptions.push(packOne);
+packOptions.push(packThree);
+packOptions.push(packSix);
+packOptions.push(packDozen);
+
+// ------------------------------------------------------------------------------
+
+// The following code is adapted from the example provided with Lab 04
+// Add Pack Size Elements to Pack Selection Dropdown Menu
+
+let selectPackElement = document.querySelector('#pack-size');
+
+for (let i=0; i < packOptions.length; i++) {
+  let option = document.createElement('option');
+  let packSize = packOptions[i];
+  option.text = packSize.orderSize;
+  option.value = packSize.priceMultiplier; 
+  selectPackElement.add(option);
+}
+// Give it a listener for the 'change' event, which is a function that will run
+// when the selected option changes. You could also do this by setting the
+// onchange property of selectElement, e.g. selectElement.onchange = ...
+
+selectPackElement.addEventListener('change', choosePackSize);
+
+function choosePackSize() {
+  // In this function, `this` corresponds to the select
+  // element. So `this.value` will contain the value of the
+  // selected option as a string.
+  console.log('You selected ' + this.value);
+
+  // We need to convert the string value to an integer
+  let packIndex = parseInt(this.value);
+
+  // Now retrieve the object at the index specified by the select's value
+  let packSelected = packOptions[packIndex];
+}
+
+// ------------------------------------------------------------------------------

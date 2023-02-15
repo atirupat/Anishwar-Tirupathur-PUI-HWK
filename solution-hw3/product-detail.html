@@ -72,11 +72,7 @@
 
             <!-- Glazing Menu Options -->
             <select id="glazing" class="dropdown-style"
-              onchange="glazingChange(this)">
-              <!-- <option value="0">Keep original</option>
-              <option value="1">Sugar milk</option>
-              <option value="2">Vanilla milk</option>
-              <option value="3">Double chocolate</option> -->
+              onchange="chooseGlazingType(this)">
             </select>
           </div>
 
@@ -87,18 +83,18 @@
             </label>
                   
           <!-- Pack Size Menu Options -->
-            <select id="pack-size" class="dropdown-style">
-              <option value="one">1</option>
-              <option value="three">3</option>
-              <option value="six">6</option>
-              <option value="dozen">12</option>
+            <select id="pack-size" class="dropdown-style"
+              onchange="choosePackSize">
             </select>
           </div>
         </div>
         
         <!-- Price and "Add to Cart" Button -->
         <div class="add-cart">
-          <p id="detail-price">$2.49</p>
+          <p id="detail-price">
+            <!-- $2.49 -->
+            Filler Text
+          </p>
         
           <!-- Button -->
           <a href="./shopping-cart.html" 
