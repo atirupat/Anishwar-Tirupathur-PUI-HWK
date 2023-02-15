@@ -84,7 +84,7 @@
                   
           <!-- Pack Size Menu Options -->
             <select id="pack-size" class="dropdown-style"
-              onchange="choosePackSize">
+              onchange="choosePackSize(this)">
             </select>
           </div>
         </div>
@@ -98,7 +98,8 @@
         
           <!-- Button -->
           <a href="./shopping-cart.html" 
-              id="detail-cart-button">
+              id="detail-cart-button"
+              onchange="calculateNewPrice(this)">
               Add to Cart
           </a>
         </div>

@@ -1,3 +1,6 @@
+// Create Global Variable for Base Price
+let basePrice = 2.49;
+
 // Creating a class for the Glazing Dropdown Menu Options
 
 class Glazing{
@@ -124,3 +127,12 @@ function choosePackSize() {
 }
 
 // ------------------------------------------------------------------------------
+// Update price with Glazing and Pack Size Changes
+// Note to self: (basePrice + glazingPrice) * packPrice. 
+let updatePriceElement = document.querySelector('#detail-price');
+
+updatePriceElement.addEventListener('change', calculateNewPrice);
+
+function calculateNewPrice() {
+  document.getElementById("detail-price").innerHTML = "New text!";
+}
