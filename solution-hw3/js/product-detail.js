@@ -1,5 +1,8 @@
-// Create Global Variable for Base Price
+// Create Global Variables
 let basePrice = 2.49;
+
+let currentGlazingPriceAdapt;
+let currentPackPriceMult;
 
 // Creating a class for the Glazing Dropdown Menu Options
 
@@ -30,6 +33,8 @@ glazingOptions.push(sugarMilk);
 glazingOptions.push(vanillaMilk);
 glazingOptions.push(doubleChocolate);
 
+currentGlazingPriceAdapt = glazingOptions[0].priceAdaptation;
+
 // ------------------------------------------------------------------------------
 
 // The following code is adapted from the example provided with Lab 04
@@ -48,23 +53,16 @@ for (let i=0; i < glazingOptions.length; i++) {
 // when the selected option changes. You could also do this by setting the
 // onchange property of selectElement, e.g. selectElement.onchange = ...
 
-selectGlazingElement.addEventListener('change', chooseGlazingType);
-
-function chooseGlazingType() {
+function chooseGlazingType(element) {
   // In this function, `this` corresponds to the select
   // element. So `this.value` will contain the value of the
-  // selected option as a string.
-  console.log('You selected ' + this.value);
+  // selected option  a string.
+  console.log('You selected glaze' + element.value);
 
   // We need to convert the string value to an integer
-  let glazeIndex = parseInt(this.value);
+  currentGlazingPriceAdapt = parseFloat(element.value);
 
-  // Now retrieve the object at the index specified by the select's value
-  let glazingSelected = glazingOptions[glazeIndex];
-
-  // Get and Return Glazing Price Adaptation
-  let glazingPriceModifier = this.priceAdaptation;
-  return glazingPriceModifier;
+  calculateNewPrice();
 }
 
 // ------------------------------------------------------------------------------
@@ -97,6 +95,8 @@ packOptions.push(packThree);
 packOptions.push(packSix);
 packOptions.push(packDozen);
 
+currentPackPriceMult = packOptions[0].priceMultiplier;
+
 // ------------------------------------------------------------------------------
 
 // The following code is adapted from the example provided with Lab 04
@@ -115,34 +115,24 @@ for (let i=0; i < packOptions.length; i++) {
 // when the selected option changes. You could also do this by setting the
 // onchange property of selectElement, e.g. selectElement.onchange = ...
 
-selectPackElement.addEventListener('change', choosePackSize);
-
-function choosePackSize() {
+function choosePackSize(element) {
   // In this function, `this` corresponds to the select
   // element. So `this.value` will contain the value of the
   // selected option as a string.
-  console.log('You selected ' + this.value);
+  console.log('You selected pack ' + element.value);
 
   // We need to convert the string value to an integer
-  let packIndex = parseInt(this.value);
+  currentPackPriceMult = parseFloat(element.value);
 
-  // Now retrieve the object at the index specified by the select's value
-  let packSelected = packOptions[packIndex];
+  calculateNewPrice();
 }
 
 // ------------------------------------------------------------------------------
 // Update price with Glazing and Pack Size Changes
-// Note to self: (basePrice + glazingPrice) * packPrice. 
 function calculateNewPrice() {
-  var priceToDisplay = basePrice + this.priceAdaptation;
-  return priceToDisplay;
+  let priceToDisplay = (basePrice + currentGlazingPriceAdapt)*currentPackPriceMult;
+
+  document.getElementById("detail-price").innerHTML = '$' + priceToDisplay.toFixed(2);
 }
 
-document.getElementById("detail-price").innerHTML = calculateNewPrice();
-// let updatePriceElement = document.querySelector('#detail-price');
-
-// updatePriceElement.addEventListener('change', calculateNewPrice);
-
-// function calculateNewPrice() {
-//   document.getElementById("detail-price").innerHTML = "New text!";
-// }
+calculateNewPrice();
