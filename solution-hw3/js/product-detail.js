@@ -14,13 +14,13 @@ class Glazing{
 };
 
 // Create Glazing Dropdown Menu Option Objects from Class
-const keepOriginal = new Glazing('Keep Original',0.00);
+const keepOriginal = new Glazing('Keep Original', 0.00);
 
-const sugarMilk = new Glazing('Sugar Milk',0.00);
+const sugarMilk = new Glazing('Sugar Milk', 0.00);
 
-const vanillaMilk = new Glazing('Vanilla Milk',0.50);
+const vanillaMilk = new Glazing('Vanilla Milk', 0.50);
 
-const doubleChocolate = new Glazing('Double Chocolate',1.50);
+const doubleChocolate = new Glazing('Double Chocolate', 1.50);
 
 // Create an array with the new glazing options
 let glazingOptions = [];
@@ -61,6 +61,10 @@ function chooseGlazingType() {
 
   // Now retrieve the object at the index specified by the select's value
   let glazingSelected = glazingOptions[glazeIndex];
+
+  // Get and Return Glazing Price Adaptation
+  let glazingPriceModifier = this.priceAdaptation;
+  return glazingPriceModifier;
 }
 
 // ------------------------------------------------------------------------------
@@ -129,10 +133,16 @@ function choosePackSize() {
 // ------------------------------------------------------------------------------
 // Update price with Glazing and Pack Size Changes
 // Note to self: (basePrice + glazingPrice) * packPrice. 
-let updatePriceElement = document.querySelector('#detail-price');
-
-updatePriceElement.addEventListener('change', calculateNewPrice);
-
 function calculateNewPrice() {
-  document.getElementById("detail-price").innerHTML = "New text!";
+  var priceToDisplay = basePrice + this.priceAdaptation;
+  return priceToDisplay;
 }
+
+document.getElementById("detail-price").innerHTML = calculateNewPrice();
+// let updatePriceElement = document.querySelector('#detail-price');
+
+// updatePriceElement.addEventListener('change', calculateNewPrice);
+
+// function calculateNewPrice() {
+//   document.getElementById("detail-price").innerHTML = "New text!";
+// }
