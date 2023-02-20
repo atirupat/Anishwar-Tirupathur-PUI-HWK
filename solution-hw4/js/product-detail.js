@@ -4,6 +4,17 @@ let basePrice = 2.49;
 let currentGlazingPriceAdapt;
 let currentPackPriceMult;
 
+let cart = [];
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+};
+
 // Update Product-Detail Page based on URL
 const queryString = window.location.search;
 console.log(queryString);
@@ -83,6 +94,9 @@ function chooseGlazingType(element) {
   currentGlazingPriceAdapt = parseFloat(element.value);
 
   calculateNewPrice();
+
+  let glazingName = element.text;
+  return glazingName;
 }
 
 // ------------------------------------------------------------------------------
@@ -145,6 +159,8 @@ function choosePackSize(element) {
   currentPackPriceMult = parseFloat(element.value);
 
   calculateNewPrice();
+
+  return currentPackPriceMult;
 }
 
 // ------------------------------------------------------------------------------
@@ -157,3 +173,22 @@ function calculateNewPrice() {
 
 calculateNewPrice();
 
+// ------------------------------------------------------------------------------
+// Update Cart Array
+function updateCart(event) {
+  console.log("function starting");
+  let currentPrice = calculateNewPrice();
+  const addOrder = new Roll(rollType, chooseGlazingType(),choosePackSize(),currentPrice);
+  console.log(addOrder);
+}
+
+document.querySelector('#detail-cart-button').addEventListener('click',updateCart);
+
+// class Roll {
+//     constructor(rollType, rollGlazing, packSize, basePrice) {
+//         this.type = rollType;
+//         this.glazing =  rollGlazing;
+//         this.size = packSize;
+//         this.basePrice = basePrice;
+//     }
+// };
