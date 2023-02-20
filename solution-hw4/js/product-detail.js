@@ -4,6 +4,21 @@ let basePrice = 2.49;
 let currentGlazingPriceAdapt;
 let currentPackPriceMult;
 
+// Update Product-Detail Page based on URL
+const queryString = window.location.search;
+console.log(queryString);
+const params = new URLSearchParams(queryString);
+const rollType = params.get("roll");
+console.log(rollType);
+
+//Update Page Title
+document.getElementById("detail-section-title").innerHTML = rollType + ' cinnamon roll';
+
+// Update Base Price
+basePrice = rolls.Strawberry.rollBasePrice;
+
+// ------------------------------------------------------------------------------
+
 // Creating a class for the Glazing Dropdown Menu Options
 
 class Glazing{
@@ -136,3 +151,4 @@ function calculateNewPrice() {
 }
 
 calculateNewPrice();
+
