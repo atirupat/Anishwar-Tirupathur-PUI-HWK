@@ -18,6 +18,10 @@ document.getElementById("detail-section-title").innerHTML = rollType + ' cinnamo
 console.log(rolls[rollType]);
 basePrice = rolls[rollType].rollBasePrice;
 
+// Update Product Image
+const productImageElement = document.querySelector('.detail-img');
+productImageElement.src = "./products/" + rolls[rollType].imageFile;
+
 // ------------------------------------------------------------------------------
 
 // Creating a class for the Glazing Dropdown Menu Options
