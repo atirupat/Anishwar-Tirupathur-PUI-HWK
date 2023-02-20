@@ -15,7 +15,8 @@ console.log(rollType);
 document.getElementById("detail-section-title").innerHTML = rollType + ' cinnamon roll';
 
 // Update Base Price
-basePrice = rolls.rollType.rollBasePrice;
+console.log(rolls[rollType]);
+basePrice = rolls[rollType].rollBasePrice;
 
 // ------------------------------------------------------------------------------
 
