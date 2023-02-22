@@ -89,8 +89,6 @@ function chooseGlazingType(element) {
   // In this function, `this` corresponds to the select
   // element. So `this.value` will contain the value of the
   // selected option  a string.
-  console.log('You selected glaze' + element.value);
-
   // We need to convert the string value to an integer
   currentGlazingPriceAdapt = parseFloat(element.value);
 
