@@ -5,7 +5,6 @@ let currentGlazingPriceAdapt;
 let currentPackPriceMult;
 
 let cart = [];
-
 let currentPrice;
 let currentGlazing;
 let currentPackSize;
