@@ -6,6 +6,10 @@ let currentPackPriceMult;
 
 let cart = [];
 
+let currentPrice;
+let currentGlazing;
+let currentPackSize;
+
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -95,8 +99,7 @@ function chooseGlazingType(element) {
 
   calculateNewPrice();
 
-  let glazingName = element.text;
-  return glazingName;
+  currentGlazing = element.text;
 }
 
 // ------------------------------------------------------------------------------
@@ -160,7 +163,7 @@ function choosePackSize(element) {
 
   calculateNewPrice();
 
-  return currentPackPriceMult;
+  currentPackSize = element.text;
 }
 
 // ------------------------------------------------------------------------------
@@ -169,6 +172,8 @@ function calculateNewPrice() {
   let priceToDisplay = (basePrice + currentGlazingPriceAdapt)*currentPackPriceMult;
 
   document.getElementById("detail-price").innerHTML = '$' + priceToDisplay.toFixed(2);
+
+  currentPrice = priceToDisplay.toFixed(2);
 }
 
 calculateNewPrice();
@@ -177,18 +182,12 @@ calculateNewPrice();
 // Update Cart Array
 function updateCart(event) {
   console.log("function starting");
-  let currentPrice = calculateNewPrice();
-  const addOrder = new Roll(rollType, chooseGlazingType(),choosePackSize(),currentPrice);
+  
+  const addOrder = new Roll(rollType, currentGlazing, currentPackSize,currentPrice);
   console.log(addOrder);
+
+  cart.push(addOrder);
+  console.log(cart);
 }
 
 document.querySelector('#detail-cart-button').addEventListener('click',updateCart);
-
-// class Roll {
-//     constructor(rollType, rollGlazing, packSize, basePrice) {
-//         this.type = rollType;
-//         this.glazing =  rollGlazing;
-//         this.size = packSize;
-//         this.basePrice = basePrice;
-//     }
-// };
