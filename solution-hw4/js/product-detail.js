@@ -21,16 +21,13 @@ class Roll {
 
 // Update Product-Detail Page based on URL
 const queryString = window.location.search;
-console.log(queryString);
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
-console.log(rollType);
 
 //Update Page Title
 document.getElementById("detail-section-title").innerHTML = rollType + ' cinnamon roll';
 
 // Update Base Price
-console.log(rolls[rollType]);
 basePrice = rolls[rollType].rollBasePrice;
 
 // Update Product Image
@@ -99,7 +96,9 @@ function chooseGlazingType(element) {
 
   calculateNewPrice();
 
-  currentGlazing = element.text;
+  let text= element.options[element.selectedIndex].text;
+
+  currentGlazing = text;
 }
 
 // ------------------------------------------------------------------------------
@@ -156,14 +155,16 @@ function choosePackSize(element) {
   // In this function, `this` corresponds to the select
   // element. So `this.value` will contain the value of the
   // selected option as a string.
-  console.log('You selected pack ' + element.value);
 
   // We need to convert the string value to an integer
   currentPackPriceMult = parseFloat(element.value);
 
   calculateNewPrice();
 
-  currentPackSize = element.text;
+  // Source: https://stackoverflow.com/questions/14976495/get-selected-option-text-with-javascript 
+  let text= element.options[element.selectedIndex].text;
+
+  currentPackSize = text;
 }
 
 // ------------------------------------------------------------------------------
@@ -181,10 +182,8 @@ calculateNewPrice();
 // ------------------------------------------------------------------------------
 // Update Cart Array
 function updateCart(event) {
-  console.log("function starting");
   
   const addOrder = new Roll(rollType, currentGlazing, currentPackSize,currentPrice);
-  console.log(addOrder);
 
   cart.push(addOrder);
   console.log(cart);
