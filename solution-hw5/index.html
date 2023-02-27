@@ -1,0 +1,129 @@
+<!-- Document Setup -->
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+      <meta charset="UTF-8">
+      <title>BunBun</title>
+      <link rel="stylesheet" href="./css/style.css"/>
+      <script defer src="./js/rollsData.js"></script>
+  </head>
+
+  <!------------------------------------------------------------------------------>
+  <body>
+    <!-- Placing logo image, navigation bar and section title in one flex box.  -->
+
+    <!-- Top Bar -->
+      <header>
+        <a href="./index.html" id="logo-link">
+          <img id="logo-image"
+            src="./logo/logo-01.svg"
+            alt="Logo of BunBun Bake Shop"/>
+        </a>
+        
+        <!-- Box for Navigation and section title -->
+        <div class="top-txt-box">
+
+          <!-- Navigation -->
+          <nav>
+            <div class="navigation-text">
+              <a href="./index.html"
+                id="nav-product">
+                  PRODUCTS
+              </a>
+            </div>
+            
+            <div class="navigation-text">
+              <a href="./shopping-cart.html"
+                id="nav-cart">
+                  CART
+              </a>
+            </div>
+          </nav>
+
+          <!-- Section Title -->
+          <h4 class="section-title">Our hand-made cinnamon rolls</h4>
+          
+        </div>
+
+    </header>
+
+    <!------------------------------------------------------------------------------>
+    <!-- Gallery -->
+    <main class="gallery-content">
+
+      <!-- Dividing the 6 cinnamon rolls into two rows of three -->
+
+      <div class="gallery-row">
+        <!-- Original Cinnamon Roll -->
+        <a href="./product-detail.html?roll=Original"
+          class="gallery-section">
+          <img src="./products/original-cinnamon-roll.jpg"
+            class="gallery-img"
+            alt="Cinnamon roll on plate next to cinnamon stick"/>
+
+          <p class="gallery-description-txt">Original cinnamon roll</p>
+          <p class="gallery-price-txt">$2.49</p>
+        </a>
+
+        <!-- Apple Cinnamon Roll -->
+        <a href="./product-detail.html?roll=Apple"
+          class="gallery-section">
+          <img src="./products/apple-cinnamon-roll.jpg"
+            class="gallery-img"
+            alt="Apple cinnamon roll and fork on a plate"/>
+
+          <p class="gallery-description-txt">Apple cinnamon roll</p>
+          <p class="gallery-price-txt">$3.49</p>
+        </a>
+
+        <!-- Raisin Cinnamon Roll -->
+        <a href="./product-detail.html?roll=Raisin"
+          class="gallery-section">
+          <img src="./products/raisin-cinnamon-roll.jpg"
+            class="gallery-img"
+            alt="Raisin cinnamon roll close-up"/>
+
+          <p class="gallery-description-txt">Raisin cinnamon roll</p>
+          <p class="gallery-price-txt">$2.99</p>
+        </a>
+      </div>
+      
+      <div class="gallery-row">
+        <!-- Walnut Cinnamon Roll -->
+        <a href="./product-detail.html?roll=Walnut"
+          class="gallery-section">
+          <img src="./products/walnut-cinnamon-roll.jpg"
+              class="gallery-img"
+              alt="Walnut cinnamon roll and two-pronged fork on plate. Cinnamon sticks and whole walnuts in bowl to the left."/>
+          <p class="gallery-description-txt">Walnut cinnamon roll</p>
+          <p class="gallery-price-txt">$3.49</p>
+        </a>
+
+        <!-- Double-chocolate Cinnamon Roll -->
+        <a href="./product-detail.html?roll=Double-chocolate"
+          class="gallery-section">
+          <img src="./products/double-chocolate-cinnamon-roll.jpg"
+            class="gallery-img"
+            alt="Close-up of double-chocolate cinnamon roll"/>
+          
+          <p class="gallery-description-txt">Double-chocolate cinnamon roll</p>
+          <p class="gallery-price-txt">$3.99</p>
+        </a>
+
+        <!-- Strawberry Cinnamon Roll -->
+        <a href="./product-detail.html?roll=Strawberry"
+          class="gallery-section">
+          <img src="./products/strawberry-cinnamon-roll.jpg"
+            class="gallery-img"
+            alt="Multiple strawberry cinnamon rolls and strawberries on top of each other"/>
+          
+          <p class="gallery-description-txt">Strawberry cinnamon roll</p>
+          <p class="gallery-price-txt">$3.99</p>
+        </a>
+
+      </div>
+    </main>
+
+  </body>
+</html>
