@@ -50,24 +50,28 @@
     <main class="shopping-cart-main-content">
       <!-- Shopping Cart Items -->
         <!-- Original Cinnamon Roll Order -->
-        <div class="cart-original-cinnamon">
-          <img src="./products/original-cinnamon-roll.jpg"
-          alt="Cinnamon roll on plate next to cinnamon stick"
-          class="cart-img"/>
+        <template id="cart-order-template">
+          <div class="cart-item-container">
+            <div class="cart-item">
+              <img src="./products/original-cinnamon-roll.jpg"
+              alt="Image of ordered cinnamon roll"
+              class="cart-img"/>
 
-          <div class="cart-txt">
-              <p class="description-txt">Original Cinnamon Roll</p>
-              <p class="description-txt">Glazing: Keep original</p>
-              <p class="description-txt">Pack Size: 1</p>
-          </div>  
+              <div class="cart-txt">
+                  <p class="description-txt">Insert Roll Type Here</p>
+                  <p class="description-txt">Glazing: Choice</p>
+                  <p class="description-txt">Pack Size: #</p>
+              </div>  
 
-          <p class="price-txt">$2.49</p>
-        </div>
+              <p class="price-txt">$2.49</p>
+            </div>
 
-        <p class="remove-txt">Remove</p>
+            <p class="remove-txt">Remove</p>
+          </div>
+        </template>
 
         <!-- Double Chocolate Cinnamon Roll Order -->
-        <div class="cart-double-chocolate">
+        <!-- <div class="cart-double-chocolate">
           <img src="./products/double-chocolate-cinnamon-roll.jpg"
             width="100"
             alt="Close-up of double-chocolate cinnamon roll"
@@ -82,7 +86,7 @@
           <p class="price-txt">$27.45</p>
         </div>
 
-        <p class="remove-txt">Remove</p>
+        <p class="remove-txt">Remove</p> -->
 
       <!-- Total and checkout -->
       <div class="cart-checkout">
