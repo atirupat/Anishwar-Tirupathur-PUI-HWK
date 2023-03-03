@@ -6,7 +6,6 @@
     <title>BunBun</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <script defer src="./js/rollsData.js"></script>
-    <script defer src="./js/product-detail.js"></script>
     <script defer src="./js/shopping-cart.js"></script>
   </head>
 
@@ -49,27 +48,30 @@
 
     <main class="shopping-cart-main-content">
       <!-- Shopping Cart Items -->
-        <!-- Original Cinnamon Roll Order -->
-        <template id="cart-order-template">
-          <div class="cart-item-container">
-            <div class="cart-item">
-              <img src="./products/original-cinnamon-roll.jpg"
-              alt="Image of ordered cinnamon roll"
-              class="cart-img"/>
+        <div id="shopping-cart-items">
+          <template id="cart-order-template">]
 
-              <div class="cart-txt">
-                  <p class="description-txt">Insert Roll Type Here</p>
-                  <p class="description-txt">Glazing: Choice</p>
-                  <p class="description-txt">Pack Size: #</p>
-              </div>  
+            <div class="cart-item-container">
 
-              <p class="price-txt">$2.49</p>
+              <div class="cart-item">
+                <img src="./products/original-cinnamon-roll.jpg"
+                alt="Image of ordered cinnamon roll"
+                class="cart-img"/>
+
+                <div class="cart-txt">
+                    <p class="description-txt">Insert Roll Type Here</p>
+                    <p class="description-txt">Glazing: Choice</p>
+                    <p class="description-txt">Pack Size: #</p>
+                </div>  
+
+                <p class="price-txt">$2.49</p>  
+              </div>
+
+              <p class="remove-txt">Remove</p>
             </div>
 
-            <p class="remove-txt">Remove</p>
-          </div>
-        </template>
-
+          </template>
+        </div>
         <!-- Double Chocolate Cinnamon Roll Order -->
         <!-- <div class="cart-double-chocolate">
           <img src="./products/double-chocolate-cinnamon-roll.jpg"
