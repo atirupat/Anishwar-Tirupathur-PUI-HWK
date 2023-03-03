@@ -6,13 +6,13 @@ let currentPackPriceMult;
 
 let cart = [];
 
-let currentPrice;
-let currentGlazing;
-let currentPackSize;
+// For both currentGlazing and currentPackSize set intial value to the default options
+let currentGlazing = 'Keep Original';
+let currentPackSize = '1';
 
 // Create dictionary for Pack Size Price Multiplier and Glazing Modification
 let glazingPriceModifiers = {
-  'Original': 0.00,
+  'Keep Original': 0.00,
   'Sugar Milk': 0.00,
   'Vanilla Milk': 0.50,
   'Double Chocolate': 1.50,
@@ -191,7 +191,7 @@ function calculateNewPrice() {
 
   document.getElementById("detail-price").innerHTML = '$' + priceToDisplay.toFixed(2);
 
-  currentPrice = priceToDisplay.toFixed(2);
+  // currentPrice = priceToDisplay.toFixed(2);
 }
 
 calculateNewPrice();
@@ -200,7 +200,7 @@ calculateNewPrice();
 // Update Cart Array
 function updateCart(event) {
   
-  const addOrder = new Roll(rollType, currentGlazing, currentPackSize,currentPrice);
+  const addOrder = new Roll(rollType, currentGlazing, currentPackSize, basePrice);
 
   cart.push(addOrder);
   console.log(cart);
