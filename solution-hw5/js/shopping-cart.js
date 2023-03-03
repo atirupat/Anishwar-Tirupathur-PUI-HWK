@@ -11,8 +11,10 @@ class Roll {
   }
 };
 
-// Array for the first four initial cinnamon rolls
-let initialCart = [];
+let calculateTotalPrice = 0.00;
+
+//Set for the first four initial cinnamon rolls
+let initialCart = new Set();
 
 // Creating initial four rolls in the cart
 const initialRollOne = new Roll ('Original', 'Sugar Milk', '1', 2.49);
@@ -20,15 +22,14 @@ const initialRollTwo = new Roll ('Walnut', 'Vanilla Milk', '12', 3.49);
 const initialRollThree = new Roll('Raisin', 'Sugar Milk', '3', 2.99);
 const initialRollFour = new Roll('Apple', 'Keep Original', '3', 3.49);
 
-initialCart.push(initialRollOne);
-initialCart.push(initialRollTwo);
-initialCart.push(initialRollThree);
-initialCart.push(initialRollFour);
+initialCart.add(initialRollOne);
+initialCart.add(initialRollTwo);
+initialCart.add(initialRollThree);
+initialCart.add(initialRollFour);
 
 console.log(initialCart);
 
 for (let item of initialCart) {
-  console.log(initialCart.indexOf(item));
   createCartElements(item);
 }
 
@@ -44,6 +45,7 @@ function createCartElements(order) {
   shoppingCartItems.prepend(order.element);
 
   updateElement(order);
+  updateTotalPrice(order);
 }
 
 function updateElement(order) {
@@ -61,5 +63,15 @@ function updateElement(order) {
   priceText.innerText = "$" + order.currentPrice;
 }
 
+function updateTotalPrice(order) {
+  let totalPrice = document.getElementById('total-price');
+  calculateTotalPrice = (Number(calculateTotalPrice) + Number(order.currentPrice)).toFixed(2);
+  totalPrice.innerText = '$' + calculateTotalPrice;
+}
 
-
+// Remove cart items
+function deleteCartElement(order) {
+  order.element.remove();
+  initialCart.delete(order);
+  console.log(initialCart.size);
+}
