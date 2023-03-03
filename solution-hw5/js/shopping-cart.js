@@ -27,8 +27,8 @@ initialCart.push(initialRollFour);
 
 console.log(initialCart);
 
-for (const item of initialCart) {
-  console.log(item);
+for (let item of initialCart) {
+  console.log(initialCart.indexOf(item));
   createCartElements(item);
 }
 
@@ -41,7 +41,7 @@ function createCartElements(order) {
 
   console.log(order.element);
   const shoppingCartItems = document.querySelector('#shopping-cart-items');
-  shoppingCartItems.append(order.element);
+  shoppingCartItems.prepend(order.element);
 
   updateElement(order);
 }
