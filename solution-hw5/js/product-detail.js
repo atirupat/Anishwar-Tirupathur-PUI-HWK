@@ -175,8 +175,6 @@ function calculateNewPrice() {
   let priceToDisplay = (basePrice + currentGlazingPriceAdapt)*currentPackPriceMult;
 
   document.getElementById("detail-price").innerHTML = '$' + priceToDisplay.toFixed(2);
-
-  // currentPrice = priceToDisplay.toFixed(2);
 }
 
 calculateNewPrice();

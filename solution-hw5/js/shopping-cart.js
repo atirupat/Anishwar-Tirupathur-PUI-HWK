@@ -33,7 +33,6 @@ for (let item of initialCart) {
 
 // Update Cart
 function createCartElements(order) {
-  // let url = order.type  access rolls to get url
   const template = document.querySelector('#cart-order-template');
   const clone = template.content.cloneNode(true);
   order.element = clone.querySelector('.cart-item-container');
@@ -68,7 +67,6 @@ function updateElement(order) {
 function updateTotalPrice() {
   let totalPrice = document.getElementById('total-price');
   let calculateTotalPrice = 0.00;
-  // calculateTotalPrice = (Number(calculateTotalPrice) + Number(order.currentPrice)).toFixed(2);
   for (let currentRoll of initialCart) {
     calculateTotalPrice = (Number(calculateTotalPrice) + Number(currentRoll.currentPrice)).toFixed(2);
   }
