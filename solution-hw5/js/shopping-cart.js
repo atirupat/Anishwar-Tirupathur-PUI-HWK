@@ -11,8 +11,6 @@ class Roll {
   }
 };
 
-let calculateTotalPrice = 0.00;
-
 //Set for the first four initial cinnamon rolls
 let initialCart = new Set();
 
@@ -45,7 +43,11 @@ function createCartElements(order) {
   shoppingCartItems.prepend(order.element);
 
   updateElement(order);
-  updateTotalPrice(order);
+
+  const removeButton = document.querySelector('.remove-txt')
+  removeButton.addEventListener('click', () => {deleteCartElement(order)});
+
+  updateTotalPrice();
 }
 
 function updateElement(order) {
@@ -63,9 +65,13 @@ function updateElement(order) {
   priceText.innerText = "$" + order.currentPrice;
 }
 
-function updateTotalPrice(order) {
+function updateTotalPrice() {
   let totalPrice = document.getElementById('total-price');
-  calculateTotalPrice = (Number(calculateTotalPrice) + Number(order.currentPrice)).toFixed(2);
+  let calculateTotalPrice = 0.00;
+  // calculateTotalPrice = (Number(calculateTotalPrice) + Number(order.currentPrice)).toFixed(2);
+  for (let currentRoll of initialCart) {
+    calculateTotalPrice = (Number(calculateTotalPrice) + Number(currentRoll.currentPrice)).toFixed(2);
+  }
   totalPrice.innerText = '$' + calculateTotalPrice;
 }
 
@@ -74,4 +80,6 @@ function deleteCartElement(order) {
   order.element.remove();
   initialCart.delete(order);
   console.log(initialCart.size);
+
+  updateTotalPrice();
 }
