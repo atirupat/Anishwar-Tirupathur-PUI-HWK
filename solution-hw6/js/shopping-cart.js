@@ -1,18 +1,17 @@
-// class Roll {
-//   constructor(rollType, rollGlazing, packSize, basePrice) {
-//       this.type = rollType;
-//       this.glazing = rollGlazing;
-//       this.size = packSize;
-//       this.basePrice = basePrice;
+class Roll {
+  constructor(rollType, rollGlazing, packSize, basePrice) {
+      this.type = rollType;
+      this.glazing = rollGlazing;
+      this.size = packSize;
+      this.basePrice = basePrice;
 
-//       this.imgURL = "./products/" + rolls[this.type]['imageFile'];
+      this.imgURL = "./products/" + rolls[this.type]["imageFile"];
 
-//       this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
-//   }
-// };
+      this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
+  }
+};
 
-//Set for the first four initial cinnamon rolls
-// let initialCart = new Set();
+let initialCart = new Set();
 
 // // Creating initial four rolls in the cart
 // const initialRollOne = new Roll ('Original', 'Sugar Milk', '1', 2.49);
@@ -27,8 +26,30 @@
 
 // console.log(initialCart);
 
-for (let item of cart) {
-  createCartElements(item);
+
+// for (let item of cart) {
+//   createCartElements(item);
+// }
+
+// Retrieve from Local Storage
+function retrieveFromLocalStorage() {
+  const rollsOrderArrayString = localStorage.getItem('rollsInCart');
+  const rollsOrderArray = JSON.parse(rollsOrderArrayString);
+  console.log(rollsOrderArray);
+
+  for (let item of rollsOrderArray) {
+    console.log('entering for loop');
+    const displayOrder = addRoll(item.rollType, item.rollGlazing, item.packSize, item.basePrice);
+    // console.log(displayOrder);
+    createCartElements(item);
+  }
+}
+
+// Create new rolls
+function addRoll(rollType, rollGlazing, packSize, basePrice) {
+  const rollToAdd = new Roll(rollType, rollGlazing, packSize, basePrice);
+  initialCart.add(rollToAdd);
+  return rollToAdd;
 }
 
 // Update Cart
