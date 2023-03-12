@@ -1,15 +1,15 @@
-class Roll {
-  constructor(rollType, rollGlazing, packSize, basePrice) {
-      this.type = rollType;
-      this.glazing = rollGlazing;
-      this.size = packSize;
-      this.basePrice = basePrice;
+// class Roll {
+//   constructor(rollType, rollGlazing, packSize, basePrice) {
+//       this.type = rollType;
+//       this.glazing = rollGlazing;
+//       this.size = packSize;
+//       this.basePrice = basePrice;
 
-      this.imgURL = "./products/" + rolls[this.type]['imageFile'];
+//       this.imgURL = "./products/" + rolls[this.type]['imageFile'];
 
-      this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
-  }
-};
+//       this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
+//   }
+// };
 
 //Set for the first four initial cinnamon rolls
 let initialCart = new Set();

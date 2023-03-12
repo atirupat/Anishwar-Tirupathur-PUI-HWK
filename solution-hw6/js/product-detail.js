@@ -4,23 +4,23 @@ let basePrice = 2.49;
 let currentGlazingPriceAdapt;
 let currentPackPriceMult;
 
-let cart = [];
+let cart = new Set();
 
 // For both currentGlazing and currentPackSize set intial value to the default options
 let currentGlazing = 'Keep Original';
 let currentPackSize = '1';
 
 class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
+  constructor(rollType, rollGlazing, packSize, basePrice) {
+      this.type = rollType;
+      this.glazing = rollGlazing;
+      this.size = packSize;
+      this.basePrice = basePrice;
 
-        this.imgURL = "./products/" + rolls[this.type]['imageFile'];
+      this.imgURL = "./products/" + rolls[this.type]['imageFile'];
 
-        this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
-    }
+      this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
+  }
 };
 
 // Update Product-Detail Page based on URL
@@ -182,11 +182,25 @@ calculateNewPrice();
 // ------------------------------------------------------------------------------
 // Update Cart Array
 function updateCart(event) {
-  
   const addOrder = new Roll(rollType, currentGlazing, currentPackSize, basePrice);
 
-  cart.push(addOrder);
+  cart.add(addOrder);
   console.log(cart);
+
+  saveToLocalStorage();
 }
 
 document.querySelector('#detail-cart-button').addEventListener('click',updateCart);
+
+// ------------------------------------------------------------------------------
+// Save to Local Storage
+function saveToLocalStorage() {
+  const rollsOrderArray = Array.from(cart);
+  // console.log(rollsOrderArray);
+
+  const rollsOrderArrayString = JSON.stringify(rollsOrderArray);
+  // console.log(rollsOrderArrayString);
+
+  localStorage.setItem('rollsInCart', rollsOrderArrayString);
+  console.log(localStorage);
+}
