@@ -1,0 +1,484 @@
+/* Text Styles */
+body {
+  font-family: sans-serif;
+}
+
+.image-caption {
+  font-size: small;
+}
+
+/* ------------------- */
+
+/* Page Titles */
+h4 {
+  font-weight: normal;
+  font-size: 30px;
+  
+  color: black;
+}
+
+/* ------------------- */
+
+/* Image Styles */
+img {
+  border: 2px solid black;
+}
+
+#logo-image:hover {
+  background-color: white;
+}
+
+/* ------------------- */
+/* Link Style */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: yellow;
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ----------------- */
+
+/* Top Bar Flex Box */
+header {
+  display: flex;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 30%;
+}
+
+/* Logo Boxes */
+#logo-link {
+  background-color: white;
+
+  width: 30%;
+  height: fit-content;
+
+  margin-right: 20px;
+}
+
+ #logo-image {
+  border: 0px;
+
+  width: auto;
+  height: 30%;
+
+  padding-top: auto;
+  padding-bottom: auto;
+} 
+
+/* Navigation and Section-Title Sub-Flex-Box */
+.top-txt-box {
+  width:auto;
+  height: inherit;
+
+  flex-grow: 1;
+}
+/* Navigation */
+nav {
+  display: flex;
+
+  border: 3px solid black;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+
+  height: 102px;
+  justify-content: flex-end;
+}
+
+.navigation-text {
+  font-size: 20px;
+  font-weight: lighter;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 35px;
+
+  padding-left: 30px;
+  padding-right: 50px;
+}
+
+/* IDs Created for Navigation Text Flex Box */
+  #nav-product {
+    margin-left: auto;
+
+    height: auto;
+  }
+
+  #nav-cart {
+    width: auto;
+    height: auto;
+
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+/* Common Page Styles */
+.section-title {
+  text-align: left;
+  align-self: flex-end;
+
+  height: auto;
+
+  margin-bottom: 0px;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+/* Gallery Flex Box */
+.gallery-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  width: 90%;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 15px;
+
+  background-color: white;
+}
+
+.gallery-row {
+  display: flex;
+
+  width: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-section {
+  width: 279px;
+  height: fit-content;
+
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 30px;
+
+  flex-shrink: 0;
+
+  padding: 2px;
+}
+
+.gallery-img {
+  width: 275px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-description-txt {
+  font-size: 18px;
+  text-decoration: underline;
+
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  width: 100%;
+}
+
+.gallery-price-txt {
+  font-size: 18px;
+
+  margin-top: 5px;
+  margin-bottom: auto;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Product Detail Flex Box */
+.product-detail-section {
+  display: flex;
+
+  width: 98%;
+  height: auto;
+
+  margin-left: auto;
+
+  padding-top: 30px;
+  padding-right: 10px;
+
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  background: white;
+}
+
+.product-img {
+  display: flex;
+
+  width: auto;
+
+  flex-grow: 1;
+
+  justify-content: flex-end;
+}
+
+.detail-img {
+  width: 570px;
+}
+
+/* Second Flexbox */
+.order-content {
+  display: flex;
+  flex-direction: column;
+
+  width: 40%;
+  height: 570px;
+}
+
+#glaze-image-caption {
+  font-size: 24px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+  width: 70%;
+
+  font-weight: lighter;
+}
+
+.dropdown-flexbox{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  width: 70%;
+  height: 30%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  padding-bottom: 40px;
+}
+
+label {
+  font-size: 24px;
+  padding-bottom: 5px;
+  font-weight: lighter;
+}
+
+select {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: auto;
+
+  font-size: 24px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.add-cart {
+  display: flex;
+
+  width: 70%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+#detail-price {
+  flex-grow: 1;
+  font-size: 20px;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+#detail-cart-button {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  text-align: center;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  width: 45%;
+  height: min-content;
+
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Shopping Cart Flex Box: */
+.shopping-cart-main-content {
+  display:flex;
+  flex-direction: column;
+
+  width: calc(70% - 60px);
+  height: auto;
+  
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+
+  margin-left: auto;
+
+  padding-right: 6.5%;
+  padding-top: 60px;
+}
+
+/* Original Cinnamon Box */
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 50%;
+}
+
+.cart-txt {
+  flex-grow: 1;
+
+  width: auto;
+  height: auto;
+
+  padding-left: 15px;
+
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+/* Double-Chocolate Box */
+.cart-double-chocolate {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 50%;
+}
+
+.cart-img {
+  width: 100px;
+}
+
+.remove-txt {
+  font-size: xx-small;
+  font-weight: bold;
+
+  color: black;
+
+  margin-top: 2px;
+  margin-bottom: 10px;
+
+  text-decoration: underline;
+}
+
+.price-txt {
+  font-size: 22px;
+
+  width: auto;
+  height: auto;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.description-txt {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+/* Total and Checkout */
+.cart-checkout {
+  display: flex;
+
+  align-items: flex-end;
+
+  width: 100%;
+  
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  border: 3px solid black;
+
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+#total-txt {
+  flex-grow: 1;
+  margin-left: 115px;
+}
+
+#total-price {
+  margin-right: 0px;
+}
+
+#cart-button {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 0px;
+
+  text-align: center;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+
+  width: fit-content;
+  height: min-content;
+
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+
+
+

@@ -1,0 +1,92 @@
+<!-- Document Setup -->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>BunBun</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script defer src="./js/rollsData.js"></script>
+    <script defer src="./js/shopping-cart.js"></script>
+  </head>
+
+  <body>
+    <!-- Top Bar -->
+
+    <!-- Placing logo image, navigation bar and section title in one flex box.  -->
+    <header>
+      <a href="./index.html" id="logo-link">
+        <img id="logo-image"
+          src="./logo/logo-01.svg"
+          alt="Logo of BunBun Bake Shop"/>
+      </a>
+      
+      <!-- Box for Navigation and section title -->
+      <div class="top-txt-box">
+
+        <!-- Navigation -->
+        <nav>
+          <div class="navigation-text">
+            <a href="./index.html"
+              id="nav-product">
+                PRODUCTS
+            </a>
+          </div>
+          
+          <div class="navigation-text">
+            <a href="./shopping-cart.html"
+              id="nav-cart">
+                CART
+            </a>
+          </div>
+        </nav>
+
+        <!-- Section Title -->
+        <h4 class="section-title">Shopping Cart</h4>
+        
+      </div>
+    </header>
+
+    <main class="shopping-cart-main-content">
+      <!-- Shopping Cart Items -->
+        <div id="shopping-cart-items">
+          <template id="cart-order-template">]
+
+            <div class="cart-item-container">
+
+              <div class="cart-item">
+                <img src="./products/original-cinnamon-roll.jpg"
+                alt="Image of ordered cinnamon roll"
+                class="cart-img"/>
+
+                <div class="cart-txt">
+                    <p class="description-txt" id="roll-type-txt">Insert Roll Type Here</p>
+                    <p class="description-txt" id="glazing-choice-txt">Glazing: Choice</p>
+                    <p class="description-txt" id="pack-size-text">Pack Size: #</p>
+                </div>  
+
+                <p class="price-txt">$2.49</p>  
+              </div>
+
+              <p class="remove-txt">Remove</p>
+            </div>
+
+          </template>
+        </div>
+
+      <!-- Total and checkout -->
+      <div class="cart-checkout">
+        <p class="price-txt"
+          id="total-txt">
+          Total
+        </p>
+        <p class="price-txt" id="total-price">
+          $29.74
+        </p>
+      </div>
+
+      <p id="cart-button">Checkout</p>
+
+    </main>
+
+  </body>
+</html>
