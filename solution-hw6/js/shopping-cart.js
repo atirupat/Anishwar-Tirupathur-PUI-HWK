@@ -12,22 +12,22 @@
 // };
 
 //Set for the first four initial cinnamon rolls
-let initialCart = new Set();
+// let initialCart = new Set();
 
-// Creating initial four rolls in the cart
-const initialRollOne = new Roll ('Original', 'Sugar Milk', '1', 2.49);
-const initialRollTwo = new Roll ('Walnut', 'Vanilla Milk', '12', 3.49);
-const initialRollThree = new Roll('Raisin', 'Sugar Milk', '3', 2.99);
-const initialRollFour = new Roll('Apple', 'Keep Original', '3', 3.49);
+// // Creating initial four rolls in the cart
+// const initialRollOne = new Roll ('Original', 'Sugar Milk', '1', 2.49);
+// const initialRollTwo = new Roll ('Walnut', 'Vanilla Milk', '12', 3.49);
+// const initialRollThree = new Roll('Raisin', 'Sugar Milk', '3', 2.99);
+// const initialRollFour = new Roll('Apple', 'Keep Original', '3', 3.49);
 
-initialCart.add(initialRollOne);
-initialCart.add(initialRollTwo);
-initialCart.add(initialRollThree);
-initialCart.add(initialRollFour);
+// initialCart.add(initialRollOne);
+// initialCart.add(initialRollTwo);
+// initialCart.add(initialRollThree);
+// initialCart.add(initialRollFour);
 
-console.log(initialCart);
+// console.log(initialCart);
 
-for (let item of initialCart) {
+for (let item of cart) {
   createCartElements(item);
 }
 
