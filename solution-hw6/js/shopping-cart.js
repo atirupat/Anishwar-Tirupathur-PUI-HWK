@@ -32,6 +32,10 @@ let initialCart = new Set();
 // }
 
 // Retrieve from Local Storage
+if (localStorage.getItem('rollsInCart') != null) {
+  retrieveFromLocalStorage();
+}
+
 function retrieveFromLocalStorage() {
   const rollsOrderArrayString = localStorage.getItem('rollsInCart');
   const rollsOrderArray = JSON.parse(rollsOrderArrayString);
