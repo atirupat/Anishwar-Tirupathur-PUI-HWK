@@ -5,7 +5,7 @@ class Roll {
       this.size = packSize;
       this.basePrice = basePrice;
 
-      this.imgURL = "./products/" + rolls[this.type]["imageFile"];
+      this.imgURL = './products/' + rolls[this.type]['imageFile'];
 
       this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
   }
@@ -40,14 +40,15 @@ function retrieveFromLocalStorage() {
   for (let item of rollsOrderArray) {
     console.log('entering for loop');
     const displayOrder = addRoll(item.rollType, item.rollGlazing, item.packSize, item.basePrice);
-    // console.log(displayOrder);
     createCartElements(item);
   }
 }
 
 // Create new rolls
 function addRoll(rollType, rollGlazing, packSize, basePrice) {
+  console.log('entering function addRoll');
   const rollToAdd = new Roll(rollType, rollGlazing, packSize, basePrice);
+  console.log('successfully defined constant');
   initialCart.add(rollToAdd);
   return rollToAdd;
 }
