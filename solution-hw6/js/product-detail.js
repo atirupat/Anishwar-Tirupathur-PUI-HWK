@@ -17,7 +17,7 @@ class Roll {
       this.size = packSize;
       this.basePrice = basePrice;
 
-      this.imgURL = "./products/" + rolls[this.type]['imageFile'];
+      this.imgURL = "./products/" + rolls[this.type]["imageFile"];
 
       this.currentPrice = ((this.basePrice + glazingPriceModifiers[this.glazing])*packSizePriceModifiers[this.size]).toFixed(2);
   }
@@ -202,5 +202,11 @@ function saveToLocalStorage() {
   // console.log(rollsOrderArrayString);
 
   localStorage.setItem('rollsInCart', rollsOrderArrayString);
+
+  // Source: https://stackoverflow.com/questions/64903227/local-storage-keeps-resetting-on-page-reload
+  
+  // const storedOrders = JSON.parse(localStorage.getItem('rollsInCart')) || [];
+
+  // const ['rollsInCart', setRollOrder] = useState(storedOrders);
   console.log(localStorage);
 }
