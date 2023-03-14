@@ -204,7 +204,7 @@ function saveToLocalStorage() {
   localStorage.setItem('rollsInCart', rollsOrderArrayString);
 
   // Source: https://stackoverflow.com/questions/64903227/local-storage-keeps-resetting-on-page-reload
-  
+
   // const storedOrders = JSON.parse(localStorage.getItem('rollsInCart')) || [];
 
   // const ['rollsInCart', setRollOrder] = useState(storedOrders);
