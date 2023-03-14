@@ -102,6 +102,7 @@ function deleteCartElement(order) {
   order.element.remove();
   initialCart.delete(order);
   console.log(initialCart.size);
+  console.log(initialCart.has(order));
 
   updateTotalPrice();
   saveToLocalStorage();

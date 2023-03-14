@@ -23,6 +23,30 @@ class Roll {
   }
 };
 
+// Retrieve from local storage
+if (localStorage.getItem('rollsInCart') != null) {
+  retrieveFromLocalStorage();
+}
+
+function retrieveFromLocalStorage() {
+  const rollsOrderArrayString = localStorage.getItem('rollsInCart');
+  const rollsOrderArray = JSON.parse(rollsOrderArrayString);
+  console.log(rollsOrderArray);
+
+  for (let item of rollsOrderArray) {
+    console.log('entering for loop');
+    const displayOrder = addRoll(item.type, item.glazing, item.size, item.basePrice);
+  }
+}
+
+
+// Create new rolls
+function addRoll(rollType, rollGlazing, packSize, basePrice) {
+  const rollToAdd = new Roll(rollType, rollGlazing, packSize, basePrice);
+  cart.add(rollToAdd);
+  // return rollToAdd;
+}
+
 // Update Product-Detail Page based on URL
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
