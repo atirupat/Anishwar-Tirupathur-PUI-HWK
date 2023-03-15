@@ -44,7 +44,7 @@ function retrieveFromLocalStorage() {
   for (let item of rollsOrderArray) {
     console.log('entering for loop');
     const displayOrder = addRoll(item.type, item.glazing, item.size, item.basePrice);
-    createCartElements(item);
+    createCartElements(displayOrder);
   }
 }
 
@@ -100,6 +100,7 @@ function updateTotalPrice() {
 // Remove cart items
 function deleteCartElement(order) {
   order.element.remove();
+  console.log(initialCart.has(order));
   initialCart.delete(order);
   console.log(initialCart.size);
   console.log(initialCart.has(order));
@@ -117,10 +118,5 @@ function saveToLocalStorage() {
 
   localStorage.setItem('rollsInCart', rollsOrderArrayString);
 
-  // Source: https://stackoverflow.com/questions/64903227/local-storage-keeps-resetting-on-page-reload
-
-  // const storedOrders = JSON.parse(localStorage.getItem('rollsInCart')) || [];
-
-  // const ['rollsInCart', setRollOrder] = useState(storedOrders);
   console.log(localStorage);
 }
