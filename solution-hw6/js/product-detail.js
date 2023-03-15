@@ -31,10 +31,9 @@ if (localStorage.getItem('rollsInCart') != null) {
 function retrieveFromLocalStorage() {
   const rollsOrderArrayString = localStorage.getItem('rollsInCart');
   const rollsOrderArray = JSON.parse(rollsOrderArrayString);
-  console.log(rollsOrderArray);
+  console.log(localStorage);
 
   for (let item of rollsOrderArray) {
-    console.log('entering for loop');
     const displayOrder = addRoll(item.type, item.glazing, item.size, item.basePrice);
   }
 }
@@ -44,7 +43,6 @@ function retrieveFromLocalStorage() {
 function addRoll(rollType, rollGlazing, packSize, basePrice) {
   const rollToAdd = new Roll(rollType, rollGlazing, packSize, basePrice);
   cart.add(rollToAdd);
-  // return rollToAdd;
 }
 
 // Update Product-Detail Page based on URL
@@ -209,7 +207,6 @@ function updateCart(event) {
   const addOrder = new Roll(rollType, currentGlazing, currentPackSize, basePrice);
 
   cart.add(addOrder);
-  console.log(cart);
 
   saveToLocalStorage();
 }
@@ -220,10 +217,8 @@ document.querySelector('#detail-cart-button').addEventListener('click',updateCar
 // Save to Local Storage
 function saveToLocalStorage() {
   const rollsOrderArray = Array.from(cart);
-  // console.log(rollsOrderArray);
 
   const rollsOrderArrayString = JSON.stringify(rollsOrderArray);
-  // console.log(rollsOrderArrayString);
 
   localStorage.setItem('rollsInCart', rollsOrderArrayString);
 

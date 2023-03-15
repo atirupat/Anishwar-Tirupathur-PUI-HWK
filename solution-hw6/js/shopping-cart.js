@@ -13,24 +13,6 @@ class Roll {
 
 let initialCart = new Set();
 
-// // Creating initial four rolls in the cart
-// const initialRollOne = new Roll ('Original', 'Sugar Milk', '1', 2.49);
-// const initialRollTwo = new Roll ('Walnut', 'Vanilla Milk', '12', 3.49);
-// const initialRollThree = new Roll('Raisin', 'Sugar Milk', '3', 2.99);
-// const initialRollFour = new Roll('Apple', 'Keep Original', '3', 3.49);
-
-// initialCart.add(initialRollOne);
-// initialCart.add(initialRollTwo);
-// initialCart.add(initialRollThree);
-// initialCart.add(initialRollFour);
-
-// console.log(initialCart);
-
-
-// for (let item of cart) {
-//   createCartElements(item);
-// }
-
 // Retrieve from Local Storage
 if (localStorage.getItem('rollsInCart') != null) {
   retrieveFromLocalStorage();
@@ -100,10 +82,7 @@ function updateTotalPrice() {
 // Remove cart items
 function deleteCartElement(order) {
   order.element.remove();
-  console.log(initialCart.has(order));
   initialCart.delete(order);
-  console.log(initialCart.size);
-  console.log(initialCart.has(order));
 
   updateTotalPrice();
   saveToLocalStorage();
@@ -111,10 +90,8 @@ function deleteCartElement(order) {
 
 function saveToLocalStorage() {
   const rollsOrderArray = Array.from(initialCart);
-  // console.log(rollsOrderArray);
 
   const rollsOrderArrayString = JSON.stringify(rollsOrderArray);
-  // console.log(rollsOrderArrayString);
 
   localStorage.setItem('rollsInCart', rollsOrderArrayString);
 
